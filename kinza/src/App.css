@@ -1,0 +1,244 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* App Container */
+.container {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.98); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  color: #444;
+  margin: 20px 0 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000;
+  margin: 10px 0;
+}
+
+/* Balance & Summary */
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  background: #f4f6fa;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.money.plus {
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.money.minus {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* History List */
+.list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 5px;
+}
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.list li {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 5px solid;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.list li:hover {
+  transform: scale(1.02);
+}
+
+.list li.plus {
+  border-color: #2ecc71;
+}
+
+.list li.minus {
+  border-color: #e74c3c;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Form */
+.form-control {
+  margin-bottom: 15px;
+}
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-control input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.form-control input:focus {
+  border-color: #5c6bc0;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background-color: #5c6bc0;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+.btn:hover {
+  background-color: #3f51b5;
+  transform: scale(1.02);
+}
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #7e57c2, #9575cd);
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.landing .title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: slideIn 1s ease-out;
+}
+
+.credit {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  animation: fadeIn 2s ease-in;
+}
+
+.enter-btn {
+  background-color: #ffffff;
+  color: #7e57c2;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.enter-btn:hover {
+  background-color: #ede7f6;
+  transform: scale(1.1);
+}
+
+.app-container {
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
