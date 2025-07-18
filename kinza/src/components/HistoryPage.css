@@ -1,0 +1,225 @@
+/* HistoryPage.css */
+/* Smooth global fade-in */
+.history-page,
+.history-title,
+.no-history,
+.history-list,
+.back-home-btn,
+.history-btn {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+/* Apply consistent text & element fade/slide effect */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideFade 0.5s ease-out forwards;
+}
+
+.fade-slide:nth-child(1) { animation-delay: 0.1s; }
+.fade-slide:nth-child(2) { animation-delay: 0.2s; }
+.fade-slide:nth-child(3) { animation-delay: 0.3s; }
+/* Dynamically grow delays if you render more items */
+
+.history-title {
+  font-size: 2.2rem;
+  transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.history-title:hover {
+  color: #2f5675;
+  transform: scale(1.02);
+}
+
+.desc, .amount {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.history-item:hover .desc,
+.history-item:hover .amount {
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* Smooth button scale effect already present — polished below */
+.back-home-btn,
+.history-btn {
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.history-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.history-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.no-history {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-left: 6px solid #3f51b5;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.history-item.income {
+  border-left-color: #4caf50;
+}
+
+.history-item.expense {
+  border-left-color: #f44336;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #3f51b5;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #303f9f;
+}
+
+/* Fade-in and slide for list items */
+.history-item {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.history-item:nth-child(1) { animation-delay: 0.1s; }
+.history-item:nth-child(2) { animation-delay: 0.2s; }
+.history-item:nth-child(3) { animation-delay: 0.3s; }
+/* Add more as needed or use JS for dynamic delay */
+
+
+.history-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2f5675; /* Blue primary */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.history-btn:hover {
+  background-color: #134271; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+.history-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

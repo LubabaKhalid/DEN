@@ -1,0 +1,160 @@
+.history-page {
+  background: linear-gradient(135deg, #f9f3ff, #dacdfd);
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-title {
+  font-size: 40px;
+  color: #4b007d;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #d3b3ff;
+}
+
+.no-history {
+  font-size: 22px;
+  color: #777;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.history-list {
+  max-width: 800px;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.history-item {
+  background: #ffffff;
+  border-left: 8px solid;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.history-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.history-item.income {
+  border-color: #4CAF50;
+}
+
+.history-item.expense {
+  border-color: #F44336;
+}
+
+.desc {
+  font-weight: 600;
+  font-size: 20px;
+  color: #222;
+  flex: 1;
+}
+
+.amount {
+  font-size: 20px;
+  color: #444;
+  font-weight: 500;
+  min-width: 100px;
+  text-align: right;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Container for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button styling */
+.dropdown-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Button hover effect */
+.dropdown-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hidden dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect on links */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

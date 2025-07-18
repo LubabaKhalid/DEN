@@ -5,11 +5,15 @@ const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('');
   const [type, setType] = useState('income');
-
   const { addTransaction } = useContext(GlobalContext);
 
   const onSubmit = e => {
     e.preventDefault();
+
+    if (+amount <= 0) {
+      alert("Please enter a positive amount.");
+      return;
+    }
 
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
@@ -20,15 +24,15 @@ const AddTransaction = () => {
     addTransaction(newTransaction);
     setText('');
     setAmount('');
-    setType('income'); // Reset dropdown
+    setType('income');
   };
 
   return (
     <>
-      <h3>Add new transaction</h3>
+      <h3>Add New Transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label>Text</label>
+          <label htmlFor="text">Description</label>
           <input
             type="text"
             value={text}
@@ -39,9 +43,10 @@ const AddTransaction = () => {
         </div>
 
         <div className="form-control">
-          <label>Amount</label>
+          <label htmlFor="amount">Amount</label>
           <input
             type="number"
+            min="1"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Enter amount..."
@@ -57,7 +62,7 @@ const AddTransaction = () => {
           </select>
         </div>
 
-        <button className="btn">Add transaction</button>
+        <button className="btn">Add Transaction</button>
       </form>
     </>
   );
